@@ -6,6 +6,22 @@
  */
 
 /**
+ * Implements hook_libraries_info().
+ */
+function mobilecommons_libraries_info() {
+  $libraries['mobilecommons'] = array(
+    'name' => 'Mobile Commons PHP',
+    'vendor url' => 'http://www.mobilecommons.com/mobile-commons-api',
+    'download url' => 'https://github.com/DoSomething/mobilecommons-php/archive/master.zip',
+    'files' => array(
+      'php' => array('lib/MobileCommons.php'),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
  * Implements hook_menu().
  */
 function mobilecommons_menu() {
@@ -31,3 +47,4 @@ function mobilecommons_permission() {
     'description' => t('Manage Mobile Commons settings.'),
   );
 }
+

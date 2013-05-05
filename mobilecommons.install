@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the mobilecommons module.
+ *
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function mobilecommons_requirements($phase) {
+  $requirements = array();
+  return $requirements;
+}
