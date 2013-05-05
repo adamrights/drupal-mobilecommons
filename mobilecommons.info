@@ -1,0 +1,6 @@
+name = MobileCommons
+description = "This module exposes the Mobile Commons API"
+version = VERSION
+core = 7.x
+
+files[] = mobilecommons.module
