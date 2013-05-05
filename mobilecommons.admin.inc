@@ -10,20 +10,21 @@
  */
 function mobilecommons_config_form($form, &$form_state)  {
 
-  $form['mobilecommons_api_auth_email'] = array(
+  $form['authentication'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Authentication')
+  );
+
+  $form['authentication']['mobilecommons_api_auth_email'] = array(
     '#type' => 'textfield',
     '#title' => t('Email'),
-    '#max_length' => 100,
-    '#size' => 20,
     '#required' => TRUE,
     '#default_value' => variable_get('mobilecommons_api_auth_email', ''),
   );
 
-  $form['mobilecommons_api_auth_password'] = array(
+  $form['authentication']['mobilecommons_api_auth_password'] = array(
     '#type' => 'password',
     '#title' => t('Password'),
-    '#max_length' => 100,
-    '#size' => 20,
     '#required' => TRUE,
   );
 
