@@ -4,3 +4,30 @@
  * @file
  * This module exposes the Mobile Commons API.
  */
+
+/**
+ * Implements hook_menu().
+ */
+function mobilecommons_menu() {
+   $items['admin/content'] = array(
+    'title' => 'Mobile Commons settings',
+    'description' => 'Manage Mobile Commons settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('mobilecommons_config_form'),
+    'access arguments' => array('administer mobilecommons'),
+    'file' => 'mobilecommons.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function mobilecommons_permission() {
+  return array(
+    'administer mobilecommons' =>  array(
+    'title' => t('Administer Mobile Commons'),
+    'description' => t('Manage Mobile Commons settings.'),
+  );
+}
