@@ -43,8 +43,9 @@ function mobilecommons_menu() {
 function mobilecommons_permission() {
   return array(
     'administer mobilecommons' =>  array(
-    'title' => t('Administer Mobile Commons'),
-    'description' => t('Manage Mobile Commons settings.'),
+      'title' => t('Administer Mobile Commons'),
+      'description' => t('Manage Mobile Commons settings.'),
+    )
   );
 }
 
