@@ -20,7 +20,7 @@ function mobilecommons_config_form($form, &$form_state)  {
   );
 
   $form['mobilecommons_api_auth_password'] = array(
-    '#type' => 'textfield',
+    '#type' => 'password',
     '#title' => t('Password'),
     '#max_length' => 100,
     '#size' => 20,
