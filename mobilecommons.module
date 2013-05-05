@@ -53,3 +53,31 @@ function mobilecommons_permission() {
   );
 }
 
+/**
+ * Makes an authenticated api request to Mobile Commons.
+ *
+ * @param $method
+ *   The api method to request.
+ *   @see For list of available methods - https://github.com/DoSomething/mobilecommons-php/blob/master/lib/MobileCommons/MobileCommons.php
+ * @param $params
+ *   An option associative array of parameters.
+ *
+ * @return
+ *   A SimpleXML response object.
+ */
+function mobilecommons_request($method, $params = array()) {
+  $library = libraries_load('mobilecommons-php');
+
+  if (empty($library['loaded'])) return FALSE;
+
+  $MobileCommons = new MobileCommons(
+    null,
+    array(
+      'username' => variable_get('mobilecommons_api_auth_email', ''),
+      'password' => variable_get('mobilecommons_api_auth_password', '')
+    )
+  );
+
+  return $MobileCommons->$method($params);
+
+}
