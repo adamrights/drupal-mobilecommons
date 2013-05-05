@@ -9,13 +9,17 @@
  * Implements hook_libraries_info().
  */
 function mobilecommons_libraries_info() {
-  $libraries['mobilecommons'] = array(
+  $libraries['mobilecommons-php'] = array(
     'name' => 'Mobile Commons PHP',
     'vendor url' => 'http://www.mobilecommons.com/mobile-commons-api',
     'download url' => 'https://github.com/DoSomething/mobilecommons-php/archive/master.zip',
+    'path' => 'lib',
     'files' => array(
-      'php' => array('lib/MobileCommons.php'),
+      'php' => array(
+        'MobileCommons.php'
+      ),
     ),
+    'version' => 1
   );
 
   return $libraries;

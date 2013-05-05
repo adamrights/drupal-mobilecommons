@@ -14,10 +14,10 @@ function mobilecommons_requirements($phase) {
 
   if ($phase == 'runtime') {
 
-    $library = libraries_detect('mobilecommons');
+    $library = libraries_detect('mobilecommons-php');
 
     if (empty($library['installed'])) {
-      $requirements['mobilecommons'] = array(
+      $requirements['mobilecommons-php'] = array(
         'title' => t('Mobile Commons PHP Library'),
         'value' => t('Any version'),
         'severity' => REQUIREMENT_ERROR,
